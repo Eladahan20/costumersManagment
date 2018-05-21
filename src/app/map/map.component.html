@@ -1,3 +1,28 @@
-<p>
-  map works!
-</p>
+<div class="container">
+    <div class="d-flex flex-column">
+        <div class="p-2" style="text-align: center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button (click)="selectZone($event.target.value)" type="button" value="1" class="btn btn-sm btn-secondary">איזור 1 </button>
+                <button (click)="selectZone($event.target.value)" type="button" value="2" class="btn btn-sm btn-secondary"> איזור 2 </button>
+                <button (click)="selectZone($event.target.value)" type="button" value="3" class="btn btn-sm btn-secondary">איזור 3 </button>
+                <button (click)="selectZone($event.target.value)" type="button" value="4" class="btn btn-sm btn-secondary">איזור 4 </button>
+                <button (click)="selectZone($event.target.value)" type="button" value="5" class="btn btn-sm btn-secondary">איזור 5 </button>
+                <button (click)="selectZone($event.target.value)" type="button" value="6" class="btn btn-sm btn-secondary">איזור 6 </button>
+                <button (click)="selectZone($event.target.value)" type="button" value="7" class="btn btn-sm btn-secondary">איזור 7 </button>
+                <button (click)="selectZone($event.target.value)" type="button" value="8" class="btn btn-sm btn-secondary">איזור 8 </button>
+            </div>
+        </div>
+      <div class="p-2">
+          <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="show($event)">
+            <div *ngFor="let costumer of costumers;">
+                <agm-marker *ngIf="costumer.zone == this.zoneSelected"
+                [latitude]="costumer.lanlat.lat" [longitude]="costumer.lanlat.lng">
+                   <agm-info-window><br>{{costumer.name}}<br>{{costumer.amount}}</agm-info-window>
+               </agm-marker>
+            </div>
+             
+            </agm-map>
+      </div>
+   
+    </div>
+  </div>

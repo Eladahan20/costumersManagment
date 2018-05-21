@@ -8,8 +8,11 @@ import { Costumer } from '../Costumer';
 export class CostumersListComponent implements OnInit {
   costumers: Array<Costumer> = 
   [
-    {name: "מורגן", address: "ירכא 44", zone: "2", lanlat: {lan: 145.3241242, lat: 133.342422}, amount: "-17,343"},
-    {name: "ממלכת לאמהא", address: "רהט 44", zone: "7", lanlat: {lan: 45.3241242, lat: 13.342422}, amount: "-330"}
+    {name: "בית אהרוני",       address:"לב הקריה 15, קרית מלאכי" , zone: "6", phone: "0549327482", lanlat: {lan: 31.729913, lat: 34.74603745}, amount: "-17,343"},
+    {name: "תות עץ", address: "טרומפלדור 95, באר שבע", zone: "7", phone: "0549327482", lanlat: {lan:31.240423, lat:  34.792262}, amount: "-330"},
+    {name:  "לה קאזה", address: "פאולוס השישי 3, נצרת", zone: "3", phone: "0549327482", lanlat: {lan:32.693913, lat: 35.291134}, amount: "-330"},
+    {name: "פנינה", address: "ויצמן 40,כפר סבא", zone: "4", phone: "0549327482", lanlat: {lan:32.177157, lat: 34.900912}, amount: "-330"},
+    {name: "טליה דרורי", address: "בת חן 7 ,חיפה", zone: "1", phone: "0549327482", lanlat: {lan: 32.784640,  lat: 35.00863}, amount: "-330"}
   ];
   constructor() { }
 

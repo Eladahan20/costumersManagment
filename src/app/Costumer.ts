@@ -1,3 +1,3 @@
 export class Costumer {
-    constructor(name: string, address: string, zone: string, lanlat: object, amount: string) {}
+    constructor(name: string, address: string, zone: string, phone: string, lanlat: object, amount: string, actions: Array<object>) {}
 }
